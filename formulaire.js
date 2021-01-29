@@ -100,54 +100,62 @@ function valChamps(){
         if(nbrLines == "null" || 0){
             erreur = "Votre panier est vide"
         }
+        if(validTel.test(tel.value) == false){
+            erreur = "Format de saisie incorrect. Veillez saisir un numéro de téléphone!"
+        }
         if(!tel.value){
             erreur = "Veuillez renseigner un numéro de téléphone!"
         }
-        if(validTel.test(tel.value) == false){
-            erreur = "Format de saisie incorrect. Veillez saisir un numéro de téléphone!"
+        
+        if(validTxt.test(city.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir votre ville"
         }
         if(!city.value){
             erreur = "veuillez renseigner votre ville!"
         }
-        if(validTxt.test(city.value) == false){
-            erreur = "Format de saisie incorrect. Veuillez saisir votre ville"
+        
+        if(validCp.test(codePostal.value) == false){
+            erreur = "Format de saisie incorrect. Veillez saisir un code postal!";
         }
         if(!codePostal.value){
             erreur = "Veuillez renseigner votre code postal!"
         }
-        if(validCp.test(codePostal.value) == false){
-            erreur = "Format de saisie incorrect. Veillez saisir un code postal!";
+        
+        if(validAddress.test(address.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir une adresse!"
         }
         if(!address.value){
             erreur = "Veuillez renseigner votre adresse!"
         }
-        if(validAddress.test(address.value) == false){
-            erreur = "Format de saisie incorrect. Veuillez saisir une adresse!"
+        
+        if(validDate.test(birth.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir une date!"
         }
         if(!birth.value){
             erreur = "Veuillez renseigner votre date de naissance!"
         }
-        if(validDate.test(birth.value) == false){
-            erreur = "Format de saisie incorrect. Veuillez saisir une date!"
+        
+        if(validEmail.test(email.value) == false){
+            erreur = "Format de saisie incorrect. Veillez renseigner une adresse mail valid "
         }
         if(!email.value){
             erreur = "Veuillez renseigner votre email!"
         }
-        if(validEmail.test(email.value) == false){
-            erreur = "Format de saisie incorrect. Veillez renseigner une adresse mail valid "
+        
+        if(validTxt.test(lastName.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir votre prénom!"
         }
         if(!lastName.value){
             erreur = "Veuillez renseigner votre prénom"
         }
-        if(validTxt.test(lastName.value) == false){
-            erreur = "Format de saisie incorrect. Veuillez saisir votre prénom!"
+        
+        if(validTxt.test(firstName.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir votre nom!"
         }
         if(!firstName.value){
             erreur = "Veuillez renseigner votre Nom!"
         }
-        if(validTxt.test(firstName.value) == false){
-            erreur = "Format de saisie incorrect. Veuillez saisir votre nom!"
-        }
+        
         if(erreur){
             //e.preventDefault();
             document.getElementById('invalid').innerHTML = erreur;
