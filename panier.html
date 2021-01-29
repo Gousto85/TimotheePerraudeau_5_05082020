@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Panier</title>
+</head>
+<body>
+    <div class="global">
+        <header>
+            <img src="logo.png" alt="logo orinoco">
+            <nav>
+                <a href="produit.html">Produit</a>
+                <a class="accueil" href="index.html">Accueil</a>
+            </nav>
+        </header> 
+        <h1>Panier</h1>
+        <section class="page-panier">
+            <table>
+                <thread>
+                    <tr>
+                        <th>Designation</th>
+                        <th>Prix</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thread>
+                <tfoot>
+                    <tr>
+                        <th id="total" colspan="4">Total</th>
+                    </tr>                    
+                </tfoot>
+                <tbody id="basketList">
+
+                </tbody>
+            </table>
+        </section>
+        <h2>Champs requis pour validation 
+            de commande</h2>
+        <form id="formulaire" method="POST"  >
+            
+            <label for="nom">Nom</label><br/>
+            <input id="nom" type="text" placeholder="Nom" name="nom" />
+            <label for="prénom">Prénom</label><br/>
+            <input id="prenom" name="prenom" type="text" placeholder="Prénom" />
+            <label for="mail">Adresse mail</label><br/>
+            <input id="mail" name="mail" type="email" placeholder="adresse@email.com" />
+            <label for="anniversaire">Date de naissance</label><br/>
+            <input id="date" name="date_naissance" type="date" />
+            <label for="adresse">Numéro et nom de rue</label><br/>
+            <input id="adresse" name="adresse" type="text" placeholder="10 nom de la rue"/>
+            <label for="complément">Complément (facultatif)</label><br/>
+            <input id="complement" name="complement" type="text" placeholder="appartement, résidence, lieu-dit"/>
+            <label for="code-postal">Code-postal</label><br/>
+            <input id="code-postal" name="code-postal" type="text" maxlength="5" placeholder="85000" />
+            <label for="ville">Ville</label><br/>
+            <input id="ville" name="ville" type="text" placeholder="Ville" />
+            <label for="tel">Numéro de téléphone</label><br/>
+            <input id="tel" name="tel" type="tel"  minlength="10" maxlength="10" placeholder="0000000000" />
+            <div id="invalid"></div>
+            <button>Valider ma commande</button>
+        </form>
+    </div>
+    <footer>
+        <p>Contact</p>
+        <p>Mentions légales</p>
+        </footer>
+    <script src="panier.js"></script>
+    <script src="formulaire.js"></script>
+</body>
+</html>

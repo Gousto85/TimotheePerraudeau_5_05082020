@@ -1,0 +1,269 @@
+footer {
+  background-color: #f3eaf1;
+  display: flex;
+  margin-top: 100px;
+}
+footer p {
+  width: 50%;
+  text-align: center;
+}
+
+header {
+  font-size: 20px;
+  background-color: #f3eaf1;
+  position: relative;
+}
+header img {
+  margin-left: 25px;
+}
+header nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  right: 25px;
+  top: 15px;
+}
+header nav a {
+  text-decoration: none;
+  margin-left: 25px;
+  color: #d11c9b;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+header nav .icone-panier {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  left: -25px;
+}
+header nav .icone-panier img {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  font: "Arial", "sans-serif";
+  width: 80%;
+  max-width: 1200px;
+  min-width: 800px;
+  margin: auto;
+}
+
+.global {
+  width: 100%;
+  height: 100%;
+  min-height: 68vh;
+}
+
+h1 {
+  font-family: "Kage-police";
+  font-size: 60px;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  h1 {
+    margin-top: 0px;
+  }
+}
+
+@font-face {
+  font-family: "Kage-police";
+  src: url(Kage-police.otf);
+}
+nav #nbre-art div {
+  position: absolute;
+  color: white;
+  border-radius: 30px;
+  background-color: #d11c9b;
+  font-size: 15px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 70px;
+  top: 12px;
+}
+
+.section1 {
+  margin-top: 50px;
+}
+.section1 table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+.section1 table th {
+  color: white;
+  background-color: black;
+  height: 30px;
+}
+.section1 table td {
+  border: 1px solid black;
+  text-align: center;
+}
+.section1 .img {
+  width: 30%;
+}
+.section1 .name, .section1 .price {
+  width: 28%;
+}
+.section1 tfoot th {
+  border: none;
+}
+.section1 tfoot img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.section1 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.section1 button {
+  color: white;
+  background-color: #3b3be8;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.section1 button:hover {
+  opacity: 0.7;
+}
+
+#page-produit {
+  text-align: center;
+  border: 1px solid #d0c3c3;
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+}
+#page-produit h2 {
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+#page-produit .elt-prod {
+  display: flex;
+}
+#page-produit .elt-prod #image-produit {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+#page-produit .elt-prod #image-produit img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#page-produit .elt-prod #image-produit + div {
+  text-align: start;
+  margin-left: 15px;
+}
+#page-produit .elt-prod #desc-prod {
+  margin-top: 60px;
+  width: 90%;
+  text-align: justify;
+}
+#page-produit button {
+  position: absolute;
+  color: white;
+  background-color: #3b3be8;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  top: 250px;
+  right: 35px;
+}
+#page-produit button:hover {
+  opacity: 0.7;
+}
+#page-produit #invalid {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.page-panier table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  border-radius: 20px;
+}
+.page-panier table th {
+  color: white;
+  background-color: grey;
+  height: 30px;
+}
+.page-panier table td {
+  text-align: center;
+  height: 50px;
+}
+.page-panier table img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#formulaire {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#formulaire input {
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+#formulaire #invalid {
+  color: red;
+  margin-bottom: 15px;
+}
+#formulaire button {
+  color: white;
+  font-weight: bold;
+  background-color: #078d07;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+}
+#formulaire button:hover {
+  opacity: 0.8;
+  box-shadow: 5px 10px 10px #8a8686;
+}
+
+#page-validation {
+  height: 70vh;
+  width: 600px;
+  margin: auto;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

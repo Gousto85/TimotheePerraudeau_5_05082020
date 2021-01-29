@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Orinoco-Accueil</title>
+</head>
+<body>
+    <div class="global">
+        <header>
+            <img src="logo.png" alt="logo orinoco">
+            <nav>
+                <a href="panier.html"><img class="icone-panier" src="icone-panier.svg" alt="icone panier">Panier</a>
+                <div id="nbre-art"></div>
+            </nav>
+        </header>
+        <section>
+            <h1>Découvrez notre gamme de caméras vintage</h1>
+            <section class="section1">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="img">Image</th>
+                            <th class="name">Nom</th>
+                            <th class="price">Prix</th>
+                            <th class="action">Action</th>
+                        </tr>
+                    </thead>  
+                    <tfoot>
+                        <tr>
+                            <th colspan="2"><img src="truck-solid.svg">Livraison rapide</th>
+                            <th colspan="2"><img src="credit-card-regular.svg">Paiement sécurisé</th>
+                        </tr>
+                    </tfoot >
+                    <tbody id="productList">
+
+                    </tbody>                  
+                </table>
+            </section>
+            
+        </section>
+        
+    </div>
+        <footer>
+            <p>Contact</p>
+            <p>Mentions légales</p>
+        </footer>
+    <script src="articles.js"></script>
+</body>
+</html>

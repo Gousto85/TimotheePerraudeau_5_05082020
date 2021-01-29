@@ -1,0 +1,56 @@
+.section1{
+    margin-top: 50px;
+    & table{
+        width: 90%;
+        margin: auto;
+        border-collapse: collapse;
+        & th{
+            //border: 1px solid white;
+            color: white;
+            background-color: black;
+            height: 30px;
+        }
+        
+        
+        & td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+& .img{
+    width: 30%;
+}
+& .name, .price{
+    width: 28%;
+}
+tfoot{
+    & th{
+        border: none;
+    }
+    & img{
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        //padding-top: 5px;
+        //border: 1px solid white;
+    }
+}
+& img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+& button{
+    color: white;
+    background-color: rgb(59, 59, 232);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+
+    }
+}
+}

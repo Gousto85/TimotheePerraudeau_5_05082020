@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Produits</title>
+</head>
+<body>
+    <div class="global">
+        <header>
+            <img src="logo.png" alt="logo orinoco">
+            <nav>
+                <a href="panier.html"><img class="icone-panier icone-panier2" src="icone-panier.svg" alt="icone panier">Panier</a>
+                <a class="accueil" href="index.html">Accueil</a>
+                <div id="nbre-art"></div>
+            </nav>
+        </header>
+        <h1>Page produit</h1>
+        <section id="page-produit">
+            <h2 id="name">Nom produit</h2>
+            <div class="elt-prod"> 
+                <div id="image-produit"></div>
+                <div>
+                    <p id="desc-prod">Description</p>
+                    <label for="">Choisissez  votre lentille</label><br/>
+                    <select name="choix lentille" id="choix-lent">
+                    </select>
+                    <p id="prix">Prix</p>
+                </div>
+            </div>
+            <div id="invalid"></div>
+           <button onclick="inputValid()">Ajouter au panier</button>
+        </section>        
+    </div>
+        <footer>
+        <p>Contact</p>
+        <p>Mentions légales</p>
+        </footer>
+    
+    <script src="produit.js"></script>
+</body>

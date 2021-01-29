@@ -1,0 +1,55 @@
+.page-panier{
+   
+    & table{
+        width: 80%;
+        margin: auto;
+        border-collapse: collapse;
+        border-radius: 20px;
+        & th{
+            color: white;
+            background-color:grey;
+            height: 30px;
+        }
+        & td{
+            text-align: center;
+            height: 50px;
+        }
+        & img{
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+        
+    }
+}
+
+h2{
+        margin-top: 50px;
+        text-align: center;
+    }
+#formulaire{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    & input{
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    #invalid{
+        color: red;
+        margin-bottom: 15px;
+    }
+    & button{
+        color: white;
+        font-weight: bold;
+        background-color: rgb(7, 141, 7);
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        &:hover{
+            opacity: 0.8;
+            box-shadow: 5px 10px 10px rgb(138, 134, 134);
+        }
+    }
+}

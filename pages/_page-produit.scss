@@ -1,0 +1,63 @@
+#page-produit{
+    text-align: center;
+    border: 1px solid rgb(208, 195, 195);
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    & h2{
+        border: 1px solid black;
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+    }
+    & .elt-prod{
+        display: flex;
+        & #image-produit{
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            margin-top: 50px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            & img{
+                width: 250px; 
+                height: 250px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+            & + div{
+                text-align: start;
+                margin-left: 15px;
+            }            
+        }
+        & #desc-prod{
+                margin-top: 60px; 
+                width: 90%;
+                text-align: justify;
+            }
+    }
+    & button{
+        position: absolute;
+        color: white;
+    background-color: rgb(59, 59, 232);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    top: 250px;
+    right: 35px;
+    &:hover{
+        opacity: 0.7;
+
+    }
+    }
+    #invalid{
+        color: red;
+        margin-bottom: 10px;
+    }
+}

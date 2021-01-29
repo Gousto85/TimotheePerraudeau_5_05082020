@@ -1,0 +1,10 @@
+footer{
+    background-color:#f3eaf1;
+    display: flex;
+    margin-top: 100px;
+    & p{
+        //color: white;
+        width: 50%;
+        text-align: center;
+    }
+}
