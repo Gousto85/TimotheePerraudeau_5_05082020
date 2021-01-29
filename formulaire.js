@@ -1,3 +1,5 @@
+
+//créé l'objet contact
 async function createContact(){
     let nom = document.getElementById('nom').value;
     let prenom = document.getElementById('prenom').value;
@@ -19,6 +21,7 @@ async function createContact(){
     console.log(contact);
 }
 
+//créé le tableau products
 async function getProductId(){
     let produits = JSON.parse(localStorage.getItem(`panier`));
     let products = [];
@@ -31,6 +34,11 @@ async function getProductId(){
     console.log(products);
 }
 
+
+//envoie une requete de type POST au serveur,
+//recoit la réponse, l'enregistre dans le localstorage,
+//ouvre la page de validation de commande et indique
+//si une erreur à eu lieu 
 async function getPromise() {   
     try{
     let contact = JSON.parse(sessionStorage.getItem('contact'));
@@ -55,14 +63,17 @@ async function getPromise() {
    } catch (e) {console.log(e)};
 }
 
+//s'assure que l'objet et le tableau à envoyer au serveur
+//on bien été créé avant de les envoyer au serveur
 async function validation(){
    await createContact();
     await getProductId(); 
     return getPromise();}
 
 
-
-
+//Vérifie le contenu des champs du formulaire
+//avant de les valider
+function valChamps(){
     document.getElementById('formulaire').addEventListener("submit", function(e){
         e.preventDefault();
         let erreur;
@@ -80,8 +91,13 @@ async function validation(){
         let validTel = /^[0-9]{10}$/;
         let validCp = /^[0-9]{5}$/;
         let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        let validTxt = /^(.|\n|\r|\n\r){3,}$/;
+        let validDate = /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/
+        ;
+        let validAddress = /^(.|\n|\r|\n\r|0-9){3,}$/;
     
-        if(nbrLines == null || 0){
+
+        if(nbrLines == "null" || 0){
             erreur = "Votre panier est vide"
         }
         if(!tel.value){
@@ -93,6 +109,9 @@ async function validation(){
         if(!city.value){
             erreur = "veuillez renseigner votre ville!"
         }
+        if(validTxt.test(city.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir votre ville"
+        }
         if(!codePostal.value){
             erreur = "Veuillez renseigner votre code postal!"
         }
@@ -102,8 +121,14 @@ async function validation(){
         if(!address.value){
             erreur = "Veuillez renseigner votre adresse!"
         }
+        if(validAddress.test(address.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir une adresse!"
+        }
         if(!birth.value){
             erreur = "Veuillez renseigner votre date de naissance!"
+        }
+        if(validDate.test(birth.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir une date!"
         }
         if(!email.value){
             erreur = "Veuillez renseigner votre email!"
@@ -114,8 +139,14 @@ async function validation(){
         if(!lastName.value){
             erreur = "Veuillez renseigner votre prénom"
         }
+        if(validTxt.test(lastName.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir votre prénom!"
+        }
         if(!firstName.value){
             erreur = "Veuillez renseigner votre Nom!"
+        }
+        if(validTxt.test(firstName.value) == false){
+            erreur = "Format de saisie incorrect. Veuillez saisir votre nom!"
         }
         if(erreur){
             //e.preventDefault();
@@ -127,5 +158,8 @@ async function validation(){
     
     
     })
-    
+}
+valChamps();
+
+
     

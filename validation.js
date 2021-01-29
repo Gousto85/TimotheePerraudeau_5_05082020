@@ -8,3 +8,4 @@ result.innerHTML = `Votre commande n° ${numero_commande} pour un total de ${tot
 
 localStorage.clear();
 sessionStorage.clear();
+     

@@ -1,22 +1,34 @@
-
-
 let nbrLines = localStorage.getItem("incr");
+
+//affiche "votre panier est vide" dans le tableau de la page
+//si aucun article n'est présent
+function affichVide(){
 if(nbrLines == 0 || "null"){
     let vide = document.getElementById('basketList');
     vide.innerHTML = `
     <tr>
         <td colspan="3">Votre panier est vide</td>
-    </tr>`
+    </tr>`}};
+affichVide();
 
-    let panier = [];
+let panier = [];
+
+//ajoute les articles présent dans le localstorage au tabeau "panier"
+function createPanier(){
 for (i = 1; i <= nbrLines; i++){
     let article = JSON.parse(localStorage.getItem(`article${i}`));
     panier.push(article);
-}
-console.log(panier);
+}};
+createPanier();
+ console.log(panier);
 localStorage.setItem('panier', JSON.stringify(panier));
 let basket = "";
 let total = 0;
+
+//affiche les articles présent dans le tableau panier
+//sur la page web en créant du contenu html personnalisé,
+//affiche le total et l'enregistre dans le localstorage
+function affichPanier(){
 for (i=0; i<panier.length; i++){
     let designation = panier[i].designation;
     let prix = panier[i].prix;
@@ -37,8 +49,11 @@ for (i=0; i<panier.length; i++){
     let Total = document.getElementById('total');
     Total.innerHTML = `Total: ${total}0€`;
     localStorage.setItem('total', total);
-}
+}};
+affichPanier();
 
+//supprime des articles du tableau panier
+//et met à jour le localstorage
 function supprimer(elt){
     panier.splice(elt, 1);
     console.log(panier);
@@ -54,7 +69,7 @@ function supprimer(elt){
     nbrLines = nbrLines-1;
     localStorage.setItem('incr',nbrLines);
     history.go(0);
-}}
+}
 
 
          
