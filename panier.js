@@ -36,6 +36,7 @@ for (i=0; i<panier.length; i++){
     console.log(total);
     let Total = document.getElementById('total');
     Total.innerHTML = `Total: ${total}0€`;
+    localStorage.setItem('total', total);
 }
 
 function supprimer(elt){
@@ -45,7 +46,8 @@ function supprimer(elt){
     for(i=0; i<panier.length; i++){
         artSup = {
             designation: panier[i].designation,
-            prix: panier[i].prix
+            prix: panier[i].prix,
+            id: panier[i].id
         }
         localStorage.setItem(`article${i+1}`, JSON.stringify(artSup));
     }

@@ -81,7 +81,9 @@ async function validation(){
         let validCp = /^[0-9]{5}$/;
         let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     
-    
+        if(nbrLines == null || 0){
+            erreur = "Votre panier est vide"
+        }
         if(!tel.value){
             erreur = "Veuillez renseigner un numéro de téléphone!"
         }
