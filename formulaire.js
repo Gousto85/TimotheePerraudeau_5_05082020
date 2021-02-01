@@ -60,7 +60,7 @@ async function getPromise() {
     }).then(data =>
         localStorage.setItem('renvoi', data.orderId),
         setTimeout(function(){window.location = "validation.html"}, 100) );
-   } catch (e) {console.log(e)};
+   } catch (e) {console.log("requète non aboutie" + e)};
 }
 
 //s'assure que l'objet et le tableau à envoyer au serveur
